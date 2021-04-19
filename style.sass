@@ -1,0 +1,656 @@
+.main
+    max-width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    background-color: rgb(52, 53, 57)
+    h1
+        color: white
+    .red_circle
+        border-radius: 50%
+        background-color: #EF483E
+    .route
+        .route_title
+            color: white
+            display: flex
+            align-items: center
+            justify-content: flex-start
+        .route_forms
+            display: flex
+            flex-direction: column
+            .route_forms__from, .route_forms__to
+                color: white
+                display: flex
+                flex-direction: column
+            .route_forms__notification
+                background-color: #4B4B4F
+                color: white
+    .transport
+        .transport_title
+            color: white
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            .transport_title__number
+                height: auto
+        .transport_forms
+            display: flex
+            justify-content: space-between
+            .transport_forms__heavy, .transport_forms__way
+                color: white
+                display: flex
+                flex-direction: column
+    .goods
+        .goods_title
+            color: white
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            .goods_title__number
+                height: auto
+        .goods_firstdropdown 
+            color: white
+            display: flex
+            flex-direction: column
+        .goods_dropdowns
+            .goods_dropdowns__danger, .goods_dropdowns__value
+                color: white
+                display: flex
+                flex-direction: column
+        .goods_radio
+            color: white
+            .goods_radio__input
+                border: 1px solid black
+                width: 2%
+                height: 4%
+                outline: block
+        .goods_temperature
+            .goods_temperature__from, .goods_temperature__to
+                color: white
+                display: flex
+                flex-direction: column
+    .time
+        .time_title
+            color: white
+            display: flex
+            align-items: center
+            justify-content: flex-start
+            .time_title__number
+                height: auto
+        .time_addresses
+            .time_addresses__titles
+                display: flex
+                color: white
+            .active
+                background-color: rgb(221, 85, 71)
+            .time_addresses__address
+                display: flex
+                background-color: #4B4B4F
+                color: white
+                position: relative
+                z-index: 1
+                .time_addresses__address_circles
+                    position: absolute
+                    z-index: 2
+                    .bigcircle
+                    position: absolute
+                    border-radius: 50% 
+                    z-index: 3
+                    .lilcircle
+                        position: absolute
+                        z-index: 4
+                        background-color: #343539
+                        border-radius: 50%
+                .active_btn
+                    opacity: 1
+                button
+                    opacity: 0.4
+                    background-color: #717174
+                    border-color: transparent
+                    color: white
+        .time_comment
+            color: white
+    .notification2
+        background-color: #4B4B4F
+        color: white   
+
+@media screen and (max-width: 412px)
+    .main
+        h1
+            font-size: 36px
+            margin: 5% 6% 0 6%
+        .red_circle
+            margin: 0 3% 0 5%
+            width: 7%
+        .route
+            .route_title
+                font-size: 18px
+                .route_title__number
+                    text-align: center
+                    height: 4% 
+            .route_forms
+                width: 90%
+                margin-left: 5%
+                .route_forms__from, .route_forms__to
+                    font-size: 14px 
+                .route_forms__from input, .route_forms__to input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0 
+                .route_forms__notification
+                    display: none 
+        .transport
+            .transport_title
+                font-size: 18px
+                .transport_title__number
+                    text-align: center
+                    height: 4% 
+            .transport_forms
+                width: 90%
+                margin: 0 auto
+                .transport_forms__heavy, .transport_forms__way 
+                    width: 48%
+                    font-size: 14px
+                .transport_forms__heavy input, .transport_forms__way input 
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0     
+        .goods
+            .goods_title
+                font-size: 18px
+                .goods_title__number
+                    text-align: center
+                    height: 4% 
+            .goods_firstdropdown 
+                width: 90%
+                margin: 0 auto
+                font-size: 14px
+            .goods_firstdropdown input
+                height: 2.5rem 
+                margin: 1% 0 3% 0 
+            .goods_dropdowns
+                width: 90%
+                margin: 0 auto
+                .goods_dropdowns__danger
+                    display: none
+                .goods_dropdowns__value
+                    font-size: 14px
+                    width: 100%
+                .goods_dropdowns__value input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0 
+            .goods_temperature
+                display: flex
+                justify-content: space-between
+                width: 90%
+                margin: 0 auto
+                .goods_temperature__from, .goods_temperature__to
+                    font-size: 14px
+                    width: 48%
+                .goods_temperature__from input,.goods_temperature__to input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0         
+        .time
+            .time_title
+                font-size: 18px
+                .time_title__number
+                    text-align: center
+                    height: 4%
+            .time_addresses
+                .time_addresses__titles
+                    font-size: 18px
+                    width: 90%
+                    margin-left: 5%
+                    justify-content: space-between 
+                .time_addresses__address
+                    align-items: center
+                    justify-content: space-between
+                    width: 90%
+                    margin: 2% auto
+                    height: 2.5rem
+                    margin-bottom: 1% 
+                    .time_addresses__address_circles
+                        width: 8%
+                        height: 60%
+                        margin-left: 3%
+                        background-color: rgb(255, 255, 255, 0.2)
+                        .bigcircle
+                            height: 3%
+                            width: 4% 
+                            .lilcircle
+                                width: 2%
+                                height: 1%
+                    span
+                        margin-left: 15%
+                        width: 40%
+                        font-size: 10px
+                    button
+                        height: 60%
+                        width: 25%
+                        font-size: 8px
+                        margin-right: 3%
+            .time_comment
+                width: 90%
+                margin: 0 auto
+                margin-bottom: 5%
+                #comment_p
+                    font-size: 20px
+                textarea
+                    width: 90%
+                    height: 5rem
+                    color: rgb(0, 0, 0, 0.3)
+                    padding: 5%
+                    font-size: 14px
+        .notification2
+            width: 84%
+            margin: 0 auto
+            padding: 3%
+            font-size: 14px
+            margin-bottom: 3%  
+
+@media screen and (min-width: 414px) 
+    .main
+        h1
+            font-size: 42px
+            margin: 5% 6% 0 6%
+        .red_circle
+            margin: 0 3% 0 5%
+            width: 7%
+        .route
+            .route_title
+                font-size: 22px
+                .route_title__number
+                    text-align: center
+                    height: 6% 
+            .route_forms
+                width: 90%
+                margin-left: 5%
+                .route_forms__from, .route_forms__to
+                    font-size: 20px 
+                .route_forms__from input, .route_forms__to input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0 
+                .route_forms__notification
+                    display: none 
+        .transport
+            .transport_title
+                font-size: 22px
+                .transport_title__number
+                    text-align: center
+                    height: 6% 
+            .transport_forms
+                width: 90%
+                margin: 0 auto
+                .transport_forms__heavy, .transport_forms__way 
+                    width: 48%
+                    font-size: 20px
+                .transport_forms__heavy input, .transport_forms__way input 
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0     
+        .goods
+            .goods_title
+                font-size: 22px
+                .goods_title__number
+                    text-align: center
+                    height: 6% 
+            .goods_firstdropdown 
+                width: 90%
+                margin: 0 auto
+                font-size: 20px
+            .goods_firstdropdown input
+                height: 2.5rem 
+                margin: 1% 0 3% 0 
+            .goods_dropdowns
+                width: 90%
+                margin: 0 auto
+                .goods_dropdowns__danger
+                    display: none
+                .goods_dropdowns__value
+                    font-size: 20px
+                    width: 100%
+                .goods_dropdowns__value input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0 
+            .goods_temperature
+                display: flex
+                justify-content: space-between
+                width: 90%
+                margin: 0 auto
+                .goods_temperature__from, .goods_temperature__to
+                    font-size: 20px
+                    width: 48%
+                .goods_temperature__from input,.goods_temperature__to input
+                    height: 2.5rem 
+                    margin: 1% 0 3% 0         
+        .time
+            .time_title
+                font-size: 22px
+                .time_title__number
+                    text-align: center
+                    height: 6%
+            .time_addresses
+                .time_addresses__titles
+                    font-size: 18px
+                    width: 90%
+                    margin-left: 5%
+                    justify-content: space-between 
+                .time_addresses__address
+                    align-items: center
+                    justify-content: space-between
+                    width: 90%
+                    margin: 2% auto
+                    height: 2.5rem
+                    margin-bottom: 1% 
+                    .time_addresses__address_circles
+                        width: 8%
+                        height: 80%
+                        margin-left: 3%
+                        background-color: rgb(255, 255, 255, 0.2)
+                        .bigcircle
+                            height: 3%
+                            width: 4% 
+                            .lilcircle
+                                width: 2%
+                                height: 1%
+                    span
+                        margin-left: 15%
+                        width: 40%
+                        font-size: 12px
+                    button
+                        height: 60%
+                        width: 25%
+                        font-size: 10px
+                        margin-right: 3%
+            .time_comment
+                width: 90%
+                margin: 0 auto
+                margin-bottom: 5%
+                #comment_p
+                    font-size: 20px
+                textarea
+                    width: 90%
+                    height: 5rem
+                    color: rgb(0, 0, 0, 0.3)
+                    padding: 5%
+                    font-size: 14px
+        .notification2
+            width: 84%
+            margin: 0 auto
+            padding: 3%
+            font-size: 14px
+            margin-bottom: 3% 
+
+@media screen and (min-width: 768px)
+    .main
+        width: 100%
+        h1
+            font-size: 56px 
+            margin-left: 6%
+        .red_circle
+            margin: 0 3% 0 5%
+            width: 4%
+        .route
+            .route_title
+                font-size: 28px
+                .route_title__number
+                    text-align: center
+                    height: 8% 
+            .route_forms
+                width: 100%
+                margin-left: 5%
+                .route_forms__from, .route_forms__to
+                    font-size: 22px 
+                    width: 50%
+                .route_forms__from input, .route_forms__to input
+                    height: 3rem 
+                    margin: 1% 0 3% 0 
+                .route_forms__notification
+                    display: flex
+                    margin-left: 51%
+                    margin-top: -14rem
+                    width: 40% 
+                    padding: 2%
+                    font-size: 19px
+                    margin-bottom: 12%
+        .transport
+            .transport_title
+                font-size: 28px
+                .transport_title__number
+                    text-align: center
+                    height: 8% 
+            .transport_forms
+                width: 50%
+                float: left
+                margin-left: 5%
+                .transport_forms__heavy, .transport_forms__way 
+                    width: 49%
+                    font-size: 22px
+                .transport_forms__heavy input, .transport_forms__way input 
+                    height: 3rem 
+                    margin: 1% 0 3% 0     
+        .goods
+            .goods_title
+                width: 100%
+                font-size: 28px
+                .goods_title__number
+                    text-align: center
+                    height: 8% 
+            .goods_firstdropdown 
+                width: 50%
+                margin-left: 5%
+                font-size: 22px
+            .goods_firstdropdown input
+                height: 3rem 
+                margin: 1% 0 3% 0 
+            .goods_dropdowns
+                width: 50%
+                margin-left: 5%
+                display: flex
+                justify-content: space-between
+                .goods_dropdowns__danger, .goods_dropdowns__value
+                    display: flex
+                    font-size: 22px
+                    width: 49%
+                .goods_dropdowns__danger input,
+                .goods_dropdowns__value input
+                    height: 3rem 
+                    margin: 1% 0 3% 0 
+            .goods_radio
+                .goods_radio__input
+                    position: absolute
+                    opacity: 0
+                    cursor: pointer
+                    height: 0
+                    width: 0
+                .goods_radio__checkmarks
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 25px
+                    width: 25px
+                    background-color: #eee
+            .goods_temperature
+                display: none        
+        .time
+            .time_title
+                font-size: 28px
+                .time_title__number
+                    text-align: center
+                    height: 8%
+            .time_addresses
+                .time_addresses__titles
+                    font-size: 18px
+                    width: 50%
+                    margin-left: 5%
+                    justify-content: space-between 
+                .time_addresses__address
+                    align-items: center
+                    justify-content: space-between
+                    width: 50%
+                    margin: 2% 0 1% 5%
+                    height: 3rem
+                    .time_addresses__address_circles
+                        width: 10%
+                        height: 80%
+                        margin-left: 3%
+                        background-color: rgb(255, 255, 255, 0.2)
+                        .bigcircle
+                            height: 3%
+                            width: 4% 
+                            .lilcircle
+                                width: 2%
+                                height: 1%
+                    span
+                        margin-left: 15%
+                        width: 40%
+                        font-size: 14px
+                    button
+                        height: 60%
+                        width: 20%
+                        font-size: 12px
+                        margin-right: 3%
+            .time_comment
+                width: 51%
+                margin-left: 5%
+                margin-bottom: 5%
+                #comment_p
+                    font-size: 23px
+                    margin-bottom: 2%
+                textarea
+                    width: 90%
+                    height: 6rem
+                    color: rgb(0, 0, 0, 0.3)
+                    padding: 3%
+                    font-size: 14px
+        .notification2
+            display: none
+
+@media screen and (min-width: 1200px)
+    .main
+        width: 100%
+        h1
+            font-size: 52px 
+            margin-left: 6%
+        .red_circle
+            margin: 0 2% 0 5%
+            width: 2%
+        .route
+            .route_title
+                font-size: 24px
+                .route_title__number
+                    text-align: center
+                    height: 8% 
+            .route_forms
+                width: 100%
+                margin-left: 5%
+                .route_forms__from, .route_forms__to
+                    font-size: 22px 
+                    width: 50%
+                .route_forms__from input, .route_forms__to input
+                    height: 3rem 
+                    margin: 1% 0 3% 0 
+                .route_forms__notification
+                    display: flex
+                    margin-left: 51%
+                    margin-top: -15rem
+                    width: 40% 
+                    padding: 2%
+                    font-size: 19px
+                    margin-bottom: 12%
+        .transport
+            .transport_title
+                font-size: 24px
+                .transport_title__number
+                    text-align: center
+                    height: 8% 
+            .transport_forms
+                width: 50%
+                float: left
+                margin-left: 5%
+                .transport_forms__heavy, .transport_forms__way 
+                    width: 49%
+                    font-size: 22px
+                .transport_forms__heavy input, .transport_forms__way input 
+                    height: 3rem 
+                    margin: 1% 0 3% 0     
+        .goods
+            .goods_title
+                width: 100%
+                font-size: 24px
+                .goods_title__number
+                    text-align: center
+                    height: 8% 
+            .goods_firstdropdown 
+                width: 50%
+                margin-left: 5%
+                font-size: 22px
+            .goods_firstdropdown input
+                height: 3rem 
+                margin: 1% 0 3% 0 
+            .goods_dropdowns
+                width: 50%
+                margin-left: 5%
+                display: flex
+                justify-content: space-between
+                .goods_dropdowns__danger, .goods_dropdowns__value
+                    display: flex
+                    font-size: 22px
+                    width: 49%
+                .goods_dropdowns__danger input,
+                .goods_dropdowns__value input
+                    height: 3rem 
+                    margin: 1% 0 3% 0 
+            .goods_temperature
+                display: none        
+        .time
+            .time_title
+                font-size: 24px
+                .time_title__number
+                    text-align: center
+                    height: 8%
+            .time_addresses
+                .time_addresses__titles
+                    font-size: 18px
+                    width: 50%
+                    margin-left: 5%
+                    justify-content: space-between 
+                .time_addresses__address
+                    align-items: center
+                    justify-content: space-between
+                    width: 50%
+                    margin: 2% 0 1% 5%
+                    height: 3rem
+                    .time_addresses__address_circles
+                        width: 6%
+                        height: 80%
+                        margin-left: 3%
+                        background-color: rgb(255, 255, 255, 0.2)
+                        .bigcircle
+                            height: 3%
+                            width: 4% 
+                            .lilcircle
+                                width: 2%
+                                height: 1%
+                    span
+                        margin-left: 10%
+                        width: 40%
+                        font-size: 16px
+                    button
+                        height: 60%
+                        width: 20%
+                        font-size: 14px
+                        margin-right: 3%
+            .time_comment
+                width: 51%
+                margin-left: 5%
+                margin-bottom: 5%
+                #comment_p
+                    font-size: 23px
+                    margin-bottom: 2%
+                textarea
+                    width: 90%
+                    height: 6rem
+                    color: rgb(0, 0, 0, 0.3)
+                    padding: 3%
+                    font-size: 16px
+        .notification2
+            display: none
+                 

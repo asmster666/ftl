@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Transport Company PSD</title>
+    </head>
+    <body class="main">
+        <h1>FTL: Прямая машина</h1>
+        <section class="route">
+            <section class="route_title">
+                <div class="route_title__number red_circle">1</div>
+                <h2>Маршрут</h2>
+            </section>
+            <section class="route_forms">
+                <label class="route_forms__from">
+                    Откуда
+                    <input type="text" placeholder="">
+                </label>
+                <label class="route_forms__to">
+                    Куда
+                    <input type="text" placeholder="">
+                </label>
+                <div class="route_forms__notification">
+                    <span>Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</span>
+                </div>
+            </section>
+        </section>
+        <section class="transport">
+            <section class="transport_title">
+                <div class="transport_title__number red_circle">2</div>
+                <h2>Транспорт</h2>
+            </section>
+            <section class="transport_forms">
+                <label class="transport_forms__heavy">
+                    Грузоподъёмность
+                    <input type="dropdown" placeholder="Не выбрана">
+                </label>
+                <label class="transport_forms__way">
+                    Способ погрузки
+                    <input type="dropdown" placeholder="">
+                </label>
+            </section>
+        </section>
+        <section class="goods">
+            <section class="goods_title">
+                <div class="goods_title__number red_circle">3</div>
+                <h2>Груз</h2>
+            </section>
+            <label class="goods_firstdropdown">
+                Тип груза
+                <input type="dropdown" placeholder="Не выбран">
+            </label>
+            <section class="goods_dropdowns">
+                <label  class="goods_dropdowns__danger">
+                    Класс опасности
+                    <input type="dropdown" placeholder="Класс 5 — Окисляющие вещества и органические перекиси">
+                </label>
+                <label class="goods_dropdowns__value">
+                    Объявленная ценность, ₽
+                    <input type="dropdown" placeholder="≥ 1">
+                </label>
+            </section>
+            <label class="goods_radio">
+                <input class="goods_radio__input" type="radio">
+                <span class="goods_radio__checkmarks"></span>
+                Требуется температурный режим
+            </label>
+            <section class="goods_temperature">
+                <label  class="goods_temperature__from">
+                    От, °C
+                    <input type="text" placeholder="-20">
+                </label>
+                <label class="goods_temperature__to">
+                    До, °C
+                    <input type="text" placeholder="+23">
+                </label>
+            </section>
+        </section>
+        <section class="time">
+            <section class="time_title">
+                <div class="time_title__number red_circle">4</div>
+                <h2>Время</h2>
+            </section>
+            <section class="time_addresses">
+                <div class="time_addresses__titles">
+                    <span>Когда прибыть на точку</span>
+                    <span>700 км в день</span>
+                </div>
+                <section class="time_addresses__address">
+                    <section class="time_addresses__address_circles">
+                        <div class="bigcircle active">
+                            <div class="lilcircle"></div>
+                        </div>
+                    </section>
+                    <span>Длинный адрес с градиентом</span>
+                    <button class="active_btn">НЕ ВЫБРАНО</button>
+                </section>
+                <section class="time_addresses__address">
+                    <section class="time_addresses__address_circles">
+                        <div class="bigcircle">
+                            <div class="lilcircle"></div>
+                        </div>
+                    </section>
+                    <span>Адрес не указан</span>
+                    <button>НЕ ВЫБРАНО</button>
+                </section>
+            </section>
+            <section class="time_comment">
+                <p id="comment_p">Комментарий к заказу</p>
+                <textarea>Укажите особенности въезда на территорию склада или подъезда к адресу</textarea>
+            </section>
+        </section>
+        <div class="notification2">
+            <span>Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</span>
+        </div>
+    </body>
+</html>

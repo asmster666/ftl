@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     mode: 'development',
@@ -19,6 +20,12 @@ module.exports = {
                 use: [
                     'style-loader', 
                     'css-loader', 
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                     {
                         loader: 'sass-loader',
                         options: {
@@ -42,7 +49,8 @@ module.exports = {
     plugins: [
         new webpack.ProgressPlugin(),
         new CssMinimizerPlugin(),
-        new HtmlWebpackPlugin({template: './index.html'})
+        new HtmlWebpackPlugin({template: './index.html'}),
+        require('autoprefixer'),
     ],
     output: {
         filename: "firstwebpack.bundle.js",

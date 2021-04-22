@@ -32,14 +32,18 @@
                 <h2>Транспорт</h2>
             </section>
             <section class="transport_forms">
-                <label class="transport_forms__heavy">
-                    Грузоподъёмность
-                    <input type="dropdown" placeholder="Не выбрана">
-                </label>
-                <label class="transport_forms__way">
+                <ul class="transport_forms__heavy closed_dropdown"> Грузоподъёмность
+                    <li><a href="#" class="nav_btn">Не выбрана</a></li>
+                    <li><a href="#">Вариант 1</a></li>
+                    <li><a href="#">Вариант 2</a></li>
+                    <li><a href="#">Вариант 3</a></li>
+                    <li><a href="#">Вариант 4</a></li>
+                    <li><a href="#">Вариант 5</a></li>
+                </ul>
+                <ul class="transport_forms__way">
                     Способ погрузки
-                    <input type="dropdown" placeholder="">
-                </label>
+                    <li><a href="#" class="nav_btn2">Задняя</a></li>
+                </ul>
             </section>
         </section>
         <section class="goods">
@@ -47,24 +51,24 @@
                 <div class="goods_title__number red_circle">3</div>
                 <h2>Груз</h2>
             </section>
-            <label class="goods_firstdropdown">
+            <ul class="goods_firstdropdown">
                 Тип груза
-                <input type="dropdown" placeholder="Не выбран">
-            </label>
+                <li><a href="#" class="nav_btn2">Не выбран</a></li>
+            </ul>
             <section class="goods_dropdowns">
-                <label  class="goods_dropdowns__danger">
+                <ul  class="goods_dropdowns__danger">
                     Класс опасности
-                    <input type="dropdown" placeholder="Класс 5 — Окисляющие вещества и органические перекиси">
-                </label>
+                    <li><a href="#" id="nav_btn5">Класс 5 — Окисляющие вещества и органические перекиси</a></li>
+                </ul>
                 <label class="goods_dropdowns__value">
                     Объявленная ценность, ₽
-                    <input type="dropdown" placeholder="≥ 1">
+                    <input type="dropdown" placeholder="  ≥ 1" color="rgb(0, 0, 0, 0.2)">
                 </label>
             </section>
             <label class="goods_radio">
                 <input class="goods_radio__input" type="radio">
                 <span class="goods_radio__checkmarks"></span>
-                Требуется температурный режим
+                <p class="goods_radio__descr">Требуется температурный режим</p>
             </label>
             <section class="goods_temperature">
                 <label  class="goods_temperature__from">
@@ -89,18 +93,20 @@
                 </div>
                 <section class="time_addresses__address">
                     <section class="time_addresses__address_circles">
-                        <div class="bigcircle active">
-                            <div class="lilcircle"></div>
-                        </div>
+                        <svg width="100%" height="100%">
+                            <circle cx="50%" cy="50%" r="40%" fill="#EF483E" />
+                            <circle cx="50%" cy="50%" r="20%" fill="#343539" />
+                        </svg>
                     </section>
                     <span>Длинный адрес с градиентом</span>
                     <button class="active_btn">НЕ ВЫБРАНО</button>
                 </section>
                 <section class="time_addresses__address">
                     <section class="time_addresses__address_circles">
-                        <div class="bigcircle">
-                            <div class="lilcircle"></div>
-                        </div>
+                        <svg width="100%" height="100%">
+                            <circle cx="50%" cy="50%" r="40%" fill="white" />
+                            <circle cx="50%" cy="50%" r="20%" fill="#343539" />
+                        </svg>
                     </section>
                     <span>Адрес не указан</span>
                     <button>НЕ ВЫБРАНО</button>

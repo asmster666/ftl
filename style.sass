@@ -40,6 +40,35 @@
                 color: white
                 display: flex
                 flex-direction: column
+            .transport_forms__heavy
+                list-style: none
+                overflow: visible
+            .transport_forms__heavy:first-child 
+                border-color: transparent
+            .transport_forms__heavy.closed_dropdown 
+                overflow: hidden
+            li 
+                height: 100%
+                background-color: white
+                border-top: 1px solid black
+            li a 
+                text-decoration: none
+                color: black
+            .transport_forms__heavy li:first-child a:after,
+            .transport_forms__way li:first-child a:after 
+                content: url("arrow-204-16.png")
+                background-size: cover
+                background-position: center
+                float: right
+            .transport_forms__heavy.closed_dropdown
+                overflow: hidden
+            .nav_btn
+                color: rgb(0, 0, 0, 0.3)
+            .transport_forms__way
+                list-style: none
+                li
+                    height: 100%
+                    background-color: white
     .goods
         .goods_title
             color: white
@@ -52,18 +81,59 @@
             color: white
             display: flex
             flex-direction: column
+            list-style: none
+            li
+                height: 100%
+                background-color: white
+            li a 
+                text-decoration: none
+                color: black
+        .goods_firstdropdown li:first-child a:after 
+                content: url("arrow-204-16.png")
+                background-size: cover
+                background-position: center
+                float: right
         .goods_dropdowns
             .goods_dropdowns__danger, .goods_dropdowns__value
                 color: white
                 display: flex
                 flex-direction: column
+            .goods_dropdowns__danger
+                list-style: none
+                li
+                    height: 100%
+                    background-color: white
+                li a 
+                    text-decoration: none
+                    color: black
+            .goods_dropdowns__danger li:first-child a:after 
+                content: url("arrow-204-16.png")
+                background-size: cover
+                background-position: center
+                float: right
         .goods_radio
+            margin: 1% auto
+            width: 90%
             color: white
             .goods_radio__input
-                border: 1px solid black
-                width: 2%
-                height: 4%
+                position: absolute
+                opacity: 0
+                cursor: pointer
+                height: 0
+                width: 0
                 outline: block
+            .goods_radio__checkmarks
+                position: absolute
+                background-color: transparent
+                border: 1px solid white
+            .goods_radio__input:checked ~ .goods_radio__checkmarks
+                background-color: #EF483E
+            .goods_radio__checkmarks:after  
+                content: url('checkmark-16-2.png')
+                position: absolute
+                display: none
+            .goods_radio__input:checked ~ .goods_radio__checkmarks:after
+                display: block
         .goods_temperature
             .goods_temperature__from, .goods_temperature__to
                 color: white
@@ -87,20 +157,8 @@
                 display: flex
                 background-color: #4B4B4F
                 color: white
-                position: relative
-                z-index: 1
                 .time_addresses__address_circles
-                    position: absolute
-                    z-index: 2
-                    .bigcircle
-                    position: absolute
-                    border-radius: 50% 
-                    z-index: 3
-                    .lilcircle
-                        position: absolute
-                        z-index: 4
-                        background-color: #343539
-                        border-radius: 50%
+                    width: 10%
                 .active_btn
                     opacity: 1
                 button
@@ -150,9 +208,25 @@
                 .transport_forms__heavy, .transport_forms__way 
                     width: 48%
                     font-size: 14px
-                .transport_forms__heavy input, .transport_forms__way input 
-                    height: 2.5rem 
-                    margin: 1% 0 3% 0     
+                .transport_forms__heavy, .transport_forms__way
+                    height: auto
+                    margin: 0
+                    padding-left: 0
+                    li 
+                        font-size: 14px
+                        padding: 6%
+                    .transport_forms__heavy li:first-child a:after,
+                    .transport_forms__way li:first-child a:after 
+                        width: 16px
+                        height: 16px
+                .transport_forms__heavy.closed_dropdown 
+                    height: calc(14px + 2.5rem)
+                .transport_forms__way
+                    margin-top: 0
+                    height: calc(14px + 12%)
+                    li
+                        font-size: 14px
+                        padding: 6% 
         .goods
             .goods_title
                 font-size: 18px
@@ -160,23 +234,57 @@
                     text-align: center
                     height: 4% 
             .goods_firstdropdown 
-                width: 90%
-                margin: 0 auto
+                width: 43%
+                float: left
                 font-size: 14px
-            .goods_firstdropdown input
-                height: 2.5rem 
-                margin: 1% 0 3% 0 
+                height: calc(14px + 12%)
+                margin-bottom: 3%
+                margin-left: 5%
+                padding-left: 0
+                li 
+                    font-size: 14px
+                    padding: 6%
+            .goods_firstdropdown li:first-child a:after 
+                width: 16px
+                height: 16px
+            ::placeholder
+                color: rgb(0, 0, 0, 0.3)
             .goods_dropdowns
-                width: 90%
-                margin: 0 auto
+                width: 43%
+                margin-left: 51%
+                margin-top: 4%
+                margin-bottom: 3%
                 .goods_dropdowns__danger
                     display: none
                 .goods_dropdowns__value
-                    font-size: 14px
+                    font-size: 12px
                     width: 100%
                 .goods_dropdowns__value input
-                    height: 2.5rem 
-                    margin: 1% 0 3% 0 
+                    height: 1.9rem 
+                    margin: 1% 0 2% 0 
+                ::placeholder
+                    color: rgb(0, 0, 0, 0.3)
+                    font-size: 14px
+            .goods_radio
+                width: 90%
+                float: left
+                height: calc(14px + 7%)
+                font-size: 14px
+                margin: 2% auto
+                margin-bottom: 5%
+                .goods_radio__descr
+                    margin-left: 15%
+                .goods_radio__checkmarks
+                    float: left
+                    margin-left: 5%
+                    margin-top: 3%
+                    width: 6%
+                    height: 4%
+                .goods_radio__checkmarks:after
+                    width: 5%
+                    height: 5%
+                    top: 6%
+                    left: 3%
             .goods_temperature
                 display: flex
                 justify-content: space-between
@@ -187,7 +295,10 @@
                     width: 48%
                 .goods_temperature__from input,.goods_temperature__to input
                     height: 2.5rem 
-                    margin: 1% 0 3% 0         
+                    margin: 1% 0 3% 0  
+                ::placeholder
+                    color: black
+                    font-size: 14px       
         .time
             .time_title
                 font-size: 18px
@@ -196,7 +307,7 @@
                     height: 4%
             .time_addresses
                 .time_addresses__titles
-                    font-size: 18px
+                    font-size: 16px
                     width: 90%
                     margin-left: 5%
                     justify-content: space-between 
@@ -209,19 +320,12 @@
                     margin-bottom: 1% 
                     .time_addresses__address_circles
                         width: 8%
-                        height: 60%
+                        height: 40%
                         margin-left: 3%
-                        background-color: rgb(255, 255, 255, 0.2)
-                        .bigcircle
-                            height: 3%
-                            width: 4% 
-                            .lilcircle
-                                width: 2%
-                                height: 1%
                     span
-                        margin-left: 15%
-                        width: 40%
-                        font-size: 10px
+                        margin-left: 3%
+                        width: 50%
+                        font-size: 12px
                     button
                         height: 60%
                         width: 25%
@@ -282,9 +386,25 @@
                 .transport_forms__heavy, .transport_forms__way 
                     width: 48%
                     font-size: 20px
-                .transport_forms__heavy input, .transport_forms__way input 
-                    height: 2.5rem 
-                    margin: 1% 0 3% 0     
+                .transport_forms__heavy
+                    height: auto
+                    margin: 0 
+                    padding-left: 0
+                    li 
+                        font-size: 20px
+                        padding: 7%
+                    .transport_forms__heavy li:first-child a:after,
+                    .transport_forms__way li:first-child a:after 
+                        width: 20px
+                        height: 20px
+                .transport_forms__heavy.closed_dropdown 
+                    height: calc(22px + 3rem) 
+                .transport_forms__way
+                    margin-top: 0
+                    height: calc(22px + 12%)
+                    li
+                        font-size: 22px
+                        padding: 6% 
         .goods
             .goods_title
                 font-size: 22px
@@ -292,23 +412,45 @@
                     text-align: center
                     height: 6% 
             .goods_firstdropdown 
-                width: 90%
-                margin: 0 auto
+                width: 43%
                 font-size: 20px
-            .goods_firstdropdown input
-                height: 2.5rem 
-                margin: 1% 0 3% 0 
+                height: calc(20px + 6%)
+                margin-left: 5%
+                margin-bottom: 2%
+                padding-left: 0
+                li 
+                    font-size: 20px
+                    padding: 6%
+            .goods_firstdropdown li:first-child a:after 
+                width: 18px
+                height: 18px 
             .goods_dropdowns
-                width: 90%
-                margin: 0 auto
+                width: 43%
+                margin-left: 52%
+                margin-top: -18%
                 .goods_dropdowns__danger
                     display: none
                 .goods_dropdowns__value
-                    font-size: 20px
+                    font-size: 16px
                     width: 100%
                 .goods_dropdowns__value input
                     height: 2.5rem 
                     margin: 1% 0 3% 0 
+            .goods_radio
+                font-size: 20px
+                margin-bottom: 5%
+                .goods_radio__descr
+                    margin-left: 15%
+                .goods_radio__checkmarks
+                    margin-left: 5%
+                    margin-top: 5%
+                    width: 5%
+                    height: 4%
+                .goods_radio__checkmarks:after
+                    width: 5%
+                    height: 5%
+                    top: 3%
+                    left: 5%
             .goods_temperature
                 display: flex
                 justify-content: space-between
@@ -340,19 +482,12 @@
                     height: 2.5rem
                     margin-bottom: 1% 
                     .time_addresses__address_circles
-                        width: 8%
-                        height: 80%
+                        width: 6%
+                        height: 40%
                         margin-left: 3%
-                        background-color: rgb(255, 255, 255, 0.2)
-                        .bigcircle
-                            height: 3%
-                            width: 4% 
-                            .lilcircle
-                                width: 2%
-                                height: 1%
                     span
-                        margin-left: 15%
-                        width: 40%
+                        margin-left: -2%
+                        width: 50%
                         font-size: 12px
                     button
                         height: 60%
@@ -397,7 +532,7 @@
                 width: 100%
                 margin-left: 5%
                 .route_forms__from, .route_forms__to
-                    font-size: 22px 
+                    font-size: 17px 
                     width: 50%
                 .route_forms__from input, .route_forms__to input
                     height: 3rem 
@@ -422,10 +557,26 @@
                 margin-left: 5%
                 .transport_forms__heavy, .transport_forms__way 
                     width: 49%
-                    font-size: 22px
-                .transport_forms__heavy input, .transport_forms__way input 
-                    height: 3rem 
-                    margin: 1% 0 3% 0     
+                    font-size: 17px
+                .transport_forms__heavy
+                    height: auto
+                    margin-bottom: 3% 
+                    padding-left: 0
+                    li 
+                        font-size: 17px
+                        padding: 8%
+                    .transport_forms__heavy li:first-child a:after,
+                    .transport_forms__way li:first-child a:after 
+                        width: 22px
+                        height: 22px
+                .transport_forms__heavy.closed_dropdown 
+                    height: calc(19px + 3rem) 
+                .transport_forms__way
+                    margin-top: 0
+                    height: calc(17px + 16%)
+                    li
+                        font-size: 17px
+                        padding: 8%   
         .goods
             .goods_title
                 width: 100%
@@ -436,37 +587,58 @@
             .goods_firstdropdown 
                 width: 50%
                 margin-left: 5%
-                font-size: 22px
-            .goods_firstdropdown input
-                height: 3rem 
-                margin: 1% 0 3% 0 
+                margin-top: 0
+                font-size: 17px
+                height: calc(17px + 6%)
+                padding-left: 0
+                li 
+                    font-size: 17px
+                    padding: 3%
+            .goods_firstdropdown li:first-child a:after 
+                width: 20px
+                height: 20px 
             .goods_dropdowns
                 width: 50%
                 margin-left: 5%
+                margin-top: 0
                 display: flex
                 justify-content: space-between
                 .goods_dropdowns__danger, .goods_dropdowns__value
                     display: flex
-                    font-size: 22px
+                    justify-content: baseline
+                    font-size: 17px
                     width: 49%
-                .goods_dropdowns__danger input,
+                .goods_dropdowns__danger
+                    height: calc(17px + 12%)
+                    margin-top: 1%
+                    margin-bottom: 2%
+                    padding-left: 0
+                    li 
+                        font-size: 17px
+                        padding: 6%
+                .goods_dropdowns__danger li:first-child a:after 
+                    width: 20px
+                    height: 20px 
+                .gradient
+                    color: rgb(0, 0, 0, 0.4)
                 .goods_dropdowns__value input
                     height: 3rem 
                     margin: 1% 0 3% 0 
             .goods_radio
-                .goods_radio__input
-                    position: absolute
-                    opacity: 0
-                    cursor: pointer
-                    height: 0
-                    width: 0
+                font-size: 20px
+                margin-bottom: 5%
+                .goods_radio__descr
+                    margin-left: 12%
                 .goods_radio__checkmarks
-                    position: absolute
-                    top: 0
-                    left: 0
-                    height: 25px
-                    width: 25px
-                    background-color: #eee
+                    margin-left: 5%
+                    margin-top: 2%
+                    width: 4%
+                    height: 3%
+                .goods_radio__checkmarks:after
+                    width: 6%
+                    height: 6%
+                    top: 16%
+                    left: 24%
             .goods_temperature
                 display: none        
         .time
@@ -488,20 +660,13 @@
                     margin: 2% 0 1% 5%
                     height: 3rem
                     .time_addresses__address_circles
-                        width: 10%
-                        height: 80%
+                        width: 8%
+                        height: 40%
                         margin-left: 3%
-                        background-color: rgb(255, 255, 255, 0.2)
-                        .bigcircle
-                            height: 3%
-                            width: 4% 
-                            .lilcircle
-                                width: 2%
-                                height: 1%
                     span
-                        margin-left: 15%
-                        width: 40%
-                        font-size: 14px
+                        margin-left: -5%
+                        width: 50%
+                        font-size: 13px
                     button
                         height: 60%
                         width: 20%
@@ -568,9 +733,25 @@
                 .transport_forms__heavy, .transport_forms__way 
                     width: 49%
                     font-size: 22px
-                .transport_forms__heavy input, .transport_forms__way input 
-                    height: 3rem 
-                    margin: 1% 0 3% 0     
+                .transport_forms__heavy
+                    height: auto 
+                    margin: -1% 0 3% 0
+                    padding-left: 0
+                    li 
+                        font-size: 22px
+                        padding: 6%
+                    .transport_forms__heavy li:first-child a:after,
+                    .transport_forms__way li:first-child a:after 
+                        width: 24px
+                        height: 24px
+                .transport_forms__heavy.closed_dropdown
+                    height: calc(28px + 4rem)
+                .transport_forms__way
+                    margin-top: -1%
+                    height: calc(22px + 12%)
+                    li
+                        font-size: 22px
+                        padding: 6% 
         .goods
             .goods_title
                 width: 100%
@@ -582,9 +763,15 @@
                 width: 50%
                 margin-left: 5%
                 font-size: 22px
-            .goods_firstdropdown input
-                height: 3rem 
-                margin: 1% 0 3% 0 
+                height: calc(22px + 6%)
+                margin-bottom: 2%
+                padding-left: 0
+                li 
+                    font-size: 22px
+                    padding: 3%
+            .goods_firstdropdown li:first-child a:after 
+                width: 22px
+                height: 22px
             .goods_dropdowns
                 width: 50%
                 margin-left: 5%
@@ -594,10 +781,35 @@
                     display: flex
                     font-size: 22px
                     width: 49%
-                .goods_dropdowns__danger input,
+                .goods_dropdowns__danger
+                    height: calc(20px + 6%)
+                    margin-top: 1%
+                    margin-bottom: 2%
+                    padding-left: 0
+                    li 
+                        font-size: 24px
+                        padding: 4%
+                .goods_dropdowns__danger li:first-child a:after 
+                    width: 22px
+                    height: 22px 
                 .goods_dropdowns__value input
-                    height: 3rem 
+                    height: 3.1rem 
                     margin: 1% 0 3% 0 
+            .goods_radio
+                font-size: 24px
+                margin-bottom: 5%
+                .goods_radio__descr
+                    margin-left: 10%
+                .goods_radio__checkmarks
+                    margin-left: 5%
+                    margin-top: 1%
+                    width: 3%
+                    height: 4%
+                .goods_radio__checkmarks:after
+                    width: 6%
+                    height: 6%
+                    top: 16%
+                    left: 28%
             .goods_temperature
                 display: none        
         .time
@@ -619,20 +831,13 @@
                     margin: 2% 0 1% 5%
                     height: 3rem
                     .time_addresses__address_circles
-                        width: 6%
-                        height: 80%
+                        width: 5%
+                        height: 50%
                         margin-left: 3%
-                        background-color: rgb(255, 255, 255, 0.2)
-                        .bigcircle
-                            height: 3%
-                            width: 4% 
-                            .lilcircle
-                                width: 2%
-                                height: 1%
                     span
-                        margin-left: 10%
-                        width: 40%
-                        font-size: 16px
+                        margin-left: -1%
+                        width: 60%
+                        font-size: 18px
                     button
                         height: 60%
                         width: 20%
